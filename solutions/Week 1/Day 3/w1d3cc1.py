@@ -19,13 +19,13 @@ print(temp_converter(temperature, flag))
 # -------------------------------------------------------------------------------------------------------------------------
 
 # Input 1 :
-# Enter the temperature in this format 60°C or 45°F : 140°C
+# Enter the temperature in this format _°C or _°F : 140°C
 
 # Output 1 :
 # 140°C is 284 in Fahrenheit
 
 # Input 2 :
-# Enter the temperature in this format 60°C or 45°F : 60°F
+# Enter the temperature in this format _°C or _°F : 60°F
 
 # Output 2 :
 # 60°F is 15 in Celsius
