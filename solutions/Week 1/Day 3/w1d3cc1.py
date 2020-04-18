@@ -12,7 +12,7 @@ def temp_converter(temp, f):
         return 'Invalid Input!!!'
 
 
-temperature, flag = input('Enter the temperature in this format 60°C or 45°F : ').split('°')
+temperature, flag = input('Enter the temperature in this format _°C or _°F : ').split('°')
 
 print(temp_converter(temperature, flag))
 
