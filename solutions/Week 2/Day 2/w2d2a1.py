@@ -19,8 +19,10 @@ def dynamicArray(n, queries):
             x = queries[i][1]
             y = queries[i][2]
             index = (x ^ lastAnswer) % n
-            lastAnswer = seqList[index][y % len(seqList[index])]
+            sub_index = y % len(seqList[index])
+            lastAnswer = seqList[index][sub_index]
             result.append(lastAnswer)
+            print(sub_index)
 
     return result
 
@@ -61,6 +63,7 @@ def dynamicArray(n, queries):
 # x : 1
 # y : 0
 # index : 1
+# sub_index : 0
 # seqList : [[5, 3], [7]]
 # lastAnswer :  7
 # result : [7]
@@ -72,6 +75,7 @@ def dynamicArray(n, queries):
 # x : 1
 # y : 1
 # index : 0
+# sub_index : 1
 # list : [[5, 3], [7]]
 # lastAnswer : 3
 # result : [7, 3]
