@@ -16,7 +16,7 @@ def combine_dict(dict1, dict2):
 print(combine_dict({'a': 100, 'b': 200, 'c': 300}, {'a': 300, 'b': 200, 'd': 400}))
 
 
-# Solution 2 (Using OR bitwise operator)
+# Solution 2 (Using OR bitwise operator and .get() method)
 
 
 def combine_dict(dict1, dict2):
