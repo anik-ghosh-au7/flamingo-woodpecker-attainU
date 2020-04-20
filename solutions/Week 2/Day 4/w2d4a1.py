@@ -10,10 +10,10 @@ class Points(object):
         self.z = z
 
     def __sub__(self, no):
-        _x = self.x - no.x
-        _y = self.y - no.y
-        _z = self.z - no.z
-        return Points(_x, _y, _z)
+        x = self.x - no.x
+        y = self.y - no.y
+        z = self.z - no.z
+        return Points(x, y, z)
 
     def dot(self, no):
         return self.x * no.x + self.y * no.y + self.z * no.z
@@ -36,3 +36,11 @@ y = (c - b).cross(d - c)
 angle = math.acos(x.dot(y) / (x.absolute() * y.absolute()))
 
 print("%.2f" % math.degrees(angle))
+
+
+# -------------------------------------------------------------------------------------------------------------------------
+
+
+# Output :
+
+# 8.19
