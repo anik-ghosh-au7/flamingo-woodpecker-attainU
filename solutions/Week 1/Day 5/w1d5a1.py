@@ -31,8 +31,8 @@
 def largest_plaindrome(n):
     num1 = int('9' * n)
     num2 = int('9' * n)
-    while num1 > 0:
-        while num2 > 0:
+    while num1 > int('1' + ('0' * (n - 1))):
+        while num2 > int('1' + ('0' * (n - 1))):
             if str(num1 * num2) == str(num1 * num2)[::-1]:
                 return num1 * num2
             num2 -= 1
