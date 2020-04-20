@@ -1,6 +1,6 @@
 # Solutions for DSA Coding Challenges & Assignments 
 
-All the assignments, CCs and homeworks will come up at this link
+All the assignments, CCs solutions for data structures & algorithms
 
 
 ### TA session Videos - drive link
