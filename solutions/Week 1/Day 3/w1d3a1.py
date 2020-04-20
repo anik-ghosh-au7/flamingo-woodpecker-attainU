@@ -6,6 +6,8 @@
 #         return [1]
 #     arr = [1, 1]
 #     for i in range(2, n):
+#         if arr[i-1] + arr[i-2] > n:
+#             break
 #         arr.append(arr[i-1] + arr[i-2])
 #     return arr
 #
@@ -22,6 +24,8 @@ def rec_fibonacci(n, n2=1, n1=1):
         return
     else:
         a = n1 + n2
+        if a > n + 2:
+            return
         print(a, end=" ")
         return rec_fibonacci(n-1, a, n2)
 
