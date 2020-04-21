@@ -5,7 +5,9 @@
       <w>anana</w>
       <w>bana</w>
       <w>banan</w>
+      <w>logn</w>
       <w>lstrip</w>
+      <w>nlogn</w>
     </words>
   </dictionary>
 </component>
