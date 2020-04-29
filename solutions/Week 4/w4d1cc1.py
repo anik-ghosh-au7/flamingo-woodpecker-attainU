@@ -28,41 +28,41 @@
 
 # minimum no. of coins required to change to_return
 
-def return_change(to_return, coins):
-    coins.sort()
-    return coin_change(to_return, coins)
-
-
-def coin_change(to_return, coins):
-    flag = None
-    for c in coins:
-        if c == to_return:
-            # print("c-->",c)
-            return [c]
-        elif c < to_return:
-            flag = c
-            # print("flag-->", flag)
-    temp_balance = to_return - flag
-    # print("temp balance-->", temp_balance)
-    result = [flag] + coin_change(temp_balance, coins)
-    return result
-
-
-print(return_change(28, [1, 10, 5, 2]))  # [10, 10, 5, 2]
-print(return_change(10, [5, 3, 2]))  # [5, 5]
-print(return_change(53, [4, 5, 6]))  # [6, 6, 6, 6, 6, 6, 6, 6, 5]
+# def return_change(to_return, coins):
+#     coins.sort()
+#     return coin_change(to_return, coins)
+#
+#
+# def coin_change(to_return, coins):
+#     flag = None
+#     for c in coins:
+#         if c == to_return:
+#             # print("c-->",c)
+#             return [c]
+#         elif c < to_return:
+#             flag = c
+#             # print("flag-->", flag)
+#     temp_balance = to_return - flag
+#     # print("temp balance-->", temp_balance)
+#     result = [flag] + coin_change(temp_balance, coins)
+#     return result
+#
+#
+# print(return_change(28, [1, 10, 5, 2]))  # [10, 10, 5, 2]
+# print(return_change(10, [5, 3, 2]))  # [5, 5]
+# print(return_change(53, [4, 5, 6]))  # [6, 6, 6, 6, 6, 6, 6, 6, 5]
 
 # total number of unique ways to return coins for to_return
 
-# def coin_change(to_return, coins):
-#     if to_return < 0 or len(coins) == 0:
-#         return 0
-#     if to_return == 0:
-#         return 1
-#     return coin_change(to_return, coins[1:]) + coin_change(to_return - coins[0], coins)
-#
-#
-# print(coin_change(10, [3, 5, 2]))
+def coin_change(to_return, coins):
+    if to_return < 0 or len(coins) == 0:
+        return 0
+    if to_return == 0:
+        return 1
+    return coin_change(to_return, coins[1:]) + coin_change(to_return - coins[0], coins)
+
+
+print(coin_change(10, [3, 5, 2]))
 
 # ------------------ explanation -------------------------
 
