@@ -54,15 +54,15 @@
 
 # total number of unique ways to return coins for to_return
 
-def coin_change(to_return, coins):
-    if to_return < 0 or len(coins) == 0:
-        return 0
-    if to_return == 0:
-        return 1
-    return coin_change(to_return, coins[1:]) + coin_change(to_return - coins[0], coins)
-
-
-print(coin_change(10, [3, 5, 2]))
+# def coin_change(to_return, coins):
+#     if to_return < 0 or len(coins) == 0:
+#         return 0
+#     if to_return == 0:
+#         return 1
+#     return coin_change(to_return, coins[1:]) + coin_change(to_return - coins[0], coins)
+#
+#
+# print(coin_change(10, [3, 5, 2]))
 
 # ------------------ explanation -------------------------
 
@@ -92,3 +92,17 @@ print(coin_change(10, [3, 5, 2]))
 #    |    | |  |2[]0[2]|  |    |  |   |  |    |   |   |   |   |  |   |  | |   |    |     |   ---  Step 7
 #    |    | |  | |   | |  |    |  |   |  |    |   |   |   |   |  |   |  | |   |    |     |
 #    0    0 0  0 0   1 0  0    0  1   0  0    0   0   1   0   0  0   1  0 0   0    0     0   ---  Output (Summation of return values)
+
+
+# to get all possible combinations of the total number of ways to return coins for to_return
+
+
+def coinchange(amt, coin1, coin2, coin3):
+    if amt < 0:
+        return 0
+    elif amt == 0:
+        return 1
+    return coinchange(amt - coin1, coin1, coin2, coin3) + coinchange(amt - coin2, coin1, coin2, coin3) + coinchange(amt - coin3, coin1, coin2, coin3)
+
+
+print(coinchange(10, 3, 5, 2))
