@@ -62,7 +62,8 @@
 #     return coin_change(to_return, coins[1:]) + coin_change(to_return - coins[0], coins)
 #
 #
-# print(coin_change(10, [3, 5, 2]))
+# print(coin_change(10, [3, 5, 2]))  # 4
+
 
 # ------------------ explanation -------------------------
 
@@ -105,4 +106,4 @@ def coinchange(amt, lis):
     return coinchange(amt - lis[0], lis) + coinchange(amt - lis[1], lis) + coinchange(amt - lis[2], lis)
 
 
-print(coinchange(10, [3, 5, 2]))
+print(coinchange(10, [3, 5, 2]))  # 14
