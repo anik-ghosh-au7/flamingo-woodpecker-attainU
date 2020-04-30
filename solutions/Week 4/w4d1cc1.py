@@ -97,12 +97,12 @@
 # to get all possible combinations of the total number of ways to return coins for to_return
 
 
-def coinchange(amt, coin1, coin2, coin3):
+def coinchange(amt, lis):
     if amt < 0:
         return 0
     elif amt == 0:
         return 1
-    return coinchange(amt - coin1, coin1, coin2, coin3) + coinchange(amt - coin2, coin1, coin2, coin3) + coinchange(amt - coin3, coin1, coin2, coin3)
+    return coinchange(amt - lis[0], lis) + coinchange(amt - lis[1], lis) + coinchange(amt - lis[2], lis)
 
 
-print(coinchange(10, 3, 5, 2))
+print(coinchange(10, [3, 5, 2]))
