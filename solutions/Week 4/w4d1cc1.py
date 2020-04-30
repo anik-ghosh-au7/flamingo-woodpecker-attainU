@@ -95,7 +95,7 @@
 #    0    0 0  0 0   1 0  0    0  1   0  0    0   0   1   0   0  0   1  0 0   0    0     0   ---  Output (Summation of return values)
 
 
-# to get all possible combinations of the total number of ways to return coins for to_return
+# to get all possible permutations of the total number of ways to return coins for to_return
 
 
 def coinchange(to_return, lis):
