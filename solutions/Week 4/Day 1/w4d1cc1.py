@@ -1,57 +1,3 @@
-# def coin_change(to_return, coins):
-#     coins.sort()
-#     flag = None
-#     for c in coins:
-#         if c == to_return:
-#             # print("c--> ",c)
-#             return c
-#         elif c < to_return:
-#             flag = c
-#             # print("flag-->", flag)
-#     temp_balance = to_return - flag
-#     # print("temp balance-->", temp_balance)
-#     result = [flag] + [coin_change(temp_balance, coins)]
-#     return flatten(result, [])
-#
-#
-# def flatten(lis, output):
-#     for i in lis:
-#         if type(i) == list:
-#             flatten(i, output)
-#         else:
-#             output.append(i)
-#     return output
-#
-#
-# print(coin_change(28, [1, 10, 5, 2]))
-
-
-# minimum no. of coins required to change to_return
-
-# def return_change(to_return, coins):
-#     coins.sort()
-#     return coin_change(to_return, coins)
-#
-#
-# def coin_change(to_return, coins):
-#     flag = None
-#     for c in coins:
-#         if c == to_return:
-#             # print("c-->",c)
-#             return [c]
-#         elif c < to_return:
-#             flag = c
-#             # print("flag-->", flag)
-#     temp_balance = to_return - flag
-#     # print("temp balance-->", temp_balance)
-#     result = [flag] + coin_change(temp_balance, coins)
-#     return result
-#
-#
-# print(return_change(28, [1, 10, 5, 2]))  # [10, 10, 5, 2]
-# print(return_change(10, [5, 3, 2]))  # [5, 5]
-# print(return_change(53, [4, 5, 6]))  # [6, 6, 6, 6, 6, 6, 6, 6, 5]
-
 # total number of unique ways to return coins for to_return
 
 # def coin_change(to_return, coins):
@@ -98,12 +44,12 @@
 # to get all possible permutations of the total number of ways to return coins for to_return
 
 
-def coinchange(to_return, lis):
-    if to_return < 0:
-        return 0
-    elif to_return == 0:
-        return 1
-    return coinchange(to_return - lis[0], lis) + coinchange(to_return - lis[1], lis) + coinchange(to_return - lis[2], lis)
-
-
-print(coinchange(10, [3, 5, 2]))  # 14
+# def coinchange(to_return, lis):
+#     if to_return < 0:
+#         return 0
+#     elif to_return == 0:
+#         return 1
+#     return coinchange(to_return - lis[0], lis) + coinchange(to_return - lis[1], lis) + coinchange(to_return - lis[2], lis)
+#
+#
+# print(coinchange(10, [3, 5, 2]))  # 14
