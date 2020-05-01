@@ -44,12 +44,12 @@
 # to get all possible permutations of the total number of ways to return coins for to_return
 
 
-# def coinchange(to_return, lis):
-#     if to_return < 0:
-#         return 0
-#     elif to_return == 0:
-#         return 1
-#     return coinchange(to_return - lis[0], lis) + coinchange(to_return - lis[1], lis) + coinchange(to_return - lis[2], lis)
-#
-#
-# print(coinchange(10, [3, 5, 2]))  # 14
+def coinchange(to_return, lis):
+    if to_return < 0:
+        return 0
+    elif to_return == 0:
+        return 1
+    return coinchange(to_return - lis[0], lis) + coinchange(to_return - lis[1], lis) + coinchange(to_return - lis[2], lis)
+
+
+print(coinchange(10, [3, 5, 2]))  # 14
