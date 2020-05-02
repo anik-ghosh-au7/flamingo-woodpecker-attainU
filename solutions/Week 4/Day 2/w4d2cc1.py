@@ -1,14 +1,14 @@
 # recursive solution
 
-# def powerSum(X, N, n=1):
-#     if n**N > X:
-#         return 0
-#     elif n**N == X:
-#         return 1
-#     return powerSum(X, N, n+1) + powerSum(X-n**N, N, n+1)
+def powerSum(X, N, n=1):
+    if n**N > X:
+        return 0
+    elif n**N == X:
+        return 1
+    return powerSum(X, N, n+1) + powerSum(X-n**N, N, n+1)
 
 
-# print(powerSum(10, 2))
+print(powerSum(10, 2))
 
 
 # ----------------------  explanation  -----------------------------
