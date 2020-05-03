@@ -2,7 +2,7 @@
 
 
 # main function
-def merge_sort(lis):
+def merge_sort(lis):   # this step will consume O(log n) time
     # base condition
     if len(lis) <= 1:
         return lis
