@@ -1,0 +1,9 @@
+Time complexity of the quick sort for the implementation where pivot will be the median element is O(nlog n) :
+
+--> to find the pivot element that is the median O(n)
+--> to split the array into sub arrays O(n)
+--> rest simple steps O(C)
+--> recursive calls O(log n + c), c is constant so O(log n)
+
+total time complexity --> O(logn (n +n)) = O(2nlog n) i.e O(nlog n)
+
