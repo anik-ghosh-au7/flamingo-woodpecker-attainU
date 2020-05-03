@@ -20,15 +20,15 @@ def merge(lis1, lis2):
     # pointer for lis1 starting from index 0
     i = 0
     # while i points till the end of lis1
-    while i < len(lis1):
-        # condition to check the ith element of lis1 is less than the 0th element of lis 2
-        if lis1[i] < lis2[0]:
+    while i < len(lis1):  # this step will consume O(n/2) i.e O(n) time
+        # condition to check the ith element of lis1 is lesser than oe equals to the 0th element of lis 2
+        if lis1[i] <= lis2[0]:
             # incrementing the pointer value to point to the next element of lis1
             i += 1
-        # condition to check if the ith element of lis1 is greater than or equal to the 0th element of lis 2
+        # condition to check if the ith element of lis1 is greater than the 0th element of lis 2
         else:
             # to swap slice of lis1 starting from the ith index and lis2
-            lis1[i:], lis2 = lis2, lis1[i:]
+            lis1[i:], lis2 = lis2, lis1[i:]   # this step the slice operation will consume O(n -1), O(n -2), O(n -3)... O(1) time i.e O(n)
     # returning the combined lists
     return lis1 + lis2
 

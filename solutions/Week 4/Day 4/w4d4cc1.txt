@@ -1,0 +1,26 @@
+Is merge sort stable, inplace and find its time complexity?
+
+Ans: The stability of any sorting algorithm depends on the fact that if two objects with equal keys (or values if no keys are associated) appear in the
+same order in the output as they were provided in the input. So merge sort can have a stable implementation depending on the comparision of the elements of
+the left and right arrays in the merge function, so if the implementation of merge sort is done in such a way to provide an ascending output, in this
+scenario when merging back the divided arrays we have to consider the element of the left array and update it in our result array if "=" condition prevails.
+
+We call a sorting algorithm in-place if the extra space used to manipulate the array in order to provide the required output falls within the range of
+O(1) to O(log n), so in case of merge sort there will be log n steps for splitting the arrays into sub arrays and log n pointers to instances of the calling
+function so the space complexity of the extra space would be O(log n * log n) = O(log^2 n) = O(2log n) still up till this stage the the effective extra space is
+O(log n), but for merging we would need an exact array as that of our input to store the merged sub arrays, so the space complexity of the extra space becomes
+O(n + log n) which definitely more than log n, so to conclude merge sort is not an in-place sorting algorithm with standard implementation, however if we twitch
+the algorithm in the merge function to use only constant extra space just for the extra pointer needed to point to the elements of the first list and then
+compare it with the 0th element of the second list and then if its lesser or equals just increment the pointer and if its not swap list2 and slice of list1
+starting from i, we could make it an inplace algorithm but the time complexity increases in this case.
+
+
+Time complexity of merge sort for standard implementation is O(nlog n) because there will be a total of (log n + 1) number of stages at most in which we will split our array into sub
+arrays, also the running time for a single step operation will be of O(1) & to merge the sub arrays made by dividing the input array of n elements the run
+time will be of O(m), so the total time for merge sort will be of O(m(log n + 1)) = O(mlog n + m) = O(mlog n) + O(m) = O(mlog n) where m is n/2 as this is dependent on n
+so we can say the time complexity to be O(nlog n).
+
+Time complexity of merge sort for inplace implementation is O(nlog n) because there will be a total of (log n + 1) number of stages at most in which we will split our array into sub
+arrays, also the running time for a single step operation will be of O(1) & to merge the sub arrays made by dividing the input array of n elements the run
+time will be of O(m^2), so the total time for inplace merge sort will be of O(m^2(log n + 1)) = O(m^2log n + m^2) = O(m^2log n) + O(m^2) = O(m^2log n) where m is n/2 as this is
+dependent on n so we can say the time complexity to be O(n^2log n).
