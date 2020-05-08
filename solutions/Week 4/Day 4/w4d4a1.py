@@ -1,5 +1,5 @@
 def closestNumbers(arr):
-    arr.sort()
+    arr.sort()  # [-7330761, -6461594, -3916237, -3620601, -357920, -20, 30, 266854, 6246457, 7374819]
     min_diff = arr[1] - arr[0]
     result = []
 
