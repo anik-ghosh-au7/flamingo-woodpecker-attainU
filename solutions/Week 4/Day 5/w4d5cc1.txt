@@ -5,5 +5,5 @@ Time complexity of the quick sort for the implementation where pivot will be the
 --> rest simple steps O(C), can be ignored for higher values of n
 --> recursive calls O(log n + 1) i.e O(log n)
 
-total time complexity --> O(logn (n +n)) = O(2nlog n) i.e O(nlog n)
+total time complexity --> (O(n) + O(n)) * O(logn) = O(2n) * O(logn) = O(2n logn) = 2 O(n logn) = O(n logn)
 
