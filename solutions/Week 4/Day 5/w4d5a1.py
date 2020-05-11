@@ -4,7 +4,7 @@ def counting_sort(arr):
 
 counting_sort([1, 2, 7, 5, 4, 8, 9, 5, 4, 4])
 # here we will apply counting sort algorithm because the value of each element falls within the range of len(arr)
-# time complexity of O(n+k) where k is the range of non-negative key values
+# time complexity of O(n+k) where n is the number of elements in input array and k is the range of input.
 
 
 def merge_sort(arr):
@@ -33,7 +33,7 @@ def bubble_sort(arr):
 bubble_sort([22, 11, 333, 444, 5555, 6672, 7894])
 # here we will apply bubble sort algorithm only the first two elements of the list is not sorted so after one step there
 # will be no swapping and we can stop the program execution
-# time complexity of O(n^2) for normal case but for this one O(1)
+# time complexity of O(n^2) for normal case but for this one O(c)
 
 
 def selection_sort(arr):
@@ -43,4 +43,4 @@ def selection_sort(arr):
 selection_sort([6083, 333, 444, 5555, 11, 6672, 7894])
 # here we will apply selection sort algorithm only the one element i.e the min one 11 is not in correct position
 # and it is in the position where the 6083 should be so after one swapping there is no need to continue the execution
-# time complexity of O(n^2) for normal case but for this one O(1)
+# time complexity of O(n^2) for normal case but for this one O(c)
