@@ -59,12 +59,13 @@
 # [4,5] - [1,2,3]    ---------------------   rearranging, merging result of stage -2 for stage - 1 count = (1 + (1 + 2))
 # [1,2,3,4,5]    -------------------------   output count = (4 + (2 + 2 + 2)) = 10
 
-#code
+# code
 t = int(input())
 for tt in range(t):
     n = int(input())
     arr = [int(x) for x in input().split()]
     count = [0]
+
 
     def merge_sort(lis, count):
         if len(lis) <= 1:
@@ -73,6 +74,7 @@ for tt in range(t):
         list_1 = merge_sort(lis[:mid], count)
         list_2 = merge_sort(lis[mid:], count)
         return merge(list_1, list_2, count)
+
 
     def merge(list_1, list_2, count):
         result = []
@@ -91,5 +93,7 @@ for tt in range(t):
         result += list_2[j:]
         count[0] += countme
         return result
+
+
     merge_sort(arr, count)
     print(count[0])
