@@ -1,12 +1,12 @@
 import bisect
 
 
-def count(x, Y, n, NoOfY):
+def count(x, y, n, NoOfY):
     if x == 0:
         return 0
     if x == 1:
         return NoOfY[0]
-    idx = bisect.bisect_right(Y, x)
+    idx = bisect.bisect_right(y, x)
     ans = n - idx
     ans += NoOfY[0] + NoOfY[1]
     if x == 2:

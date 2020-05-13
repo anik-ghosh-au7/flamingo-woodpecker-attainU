@@ -5,6 +5,11 @@
 # 5
 # 2 4 1 3 5
 
+# Explanation
+# 2 1 4 3 5 - count = 1
+# 2 1 3 4 5 - count = 2
+# 1 2 3 4 5 - count = 3
+
 # output
 # 3
 
@@ -13,8 +18,46 @@
 # 5
 # 5 4 3 2 1
 
+# Explanation
+# 4 5 3 2 1 - count = 1
+# 4 3 5 2 1 - count = 2
+# 4 3 2 5 1 - count = 3
+# 4 3 2 1 5 - count = 4
+
+# 3 4 2 1 5 - count = 5
+# 3 2 4 1 5 - count = 6
+# 3 2 1 4 5 - count = 7
+
+# 2 3 1 4 5 - count = 8
+# 2 1 3 4 5 - count = 9
+
+# 1 2 3 4 5 - count = 10
+
 # output
-# 19
+# 10
+
+
+# Explanation in case of (Merge Sort)
+
+# [2,4,1,3,5]    -------------------------   input
+# [2,4] - [1,3,5]    ---------------------   splitting in stage - 1
+# [2] = [4] - [1] = [3,5]    -------------   splitting in stage - 2
+# [2] = [4] - [1] = [3] . [5]    ---------   splitting in stage - 3
+# [2] = [4] - [1] = [3,5]    -------------   rearranging, merging result of stage -3 for stage - 2 (count = 0)
+# [2,4] - [1,3,5]    ---------------------   rearranging, merging result of stage -2 for stage - 1 (count = 0)
+# [1,2,3,4,5]    -------------------------   output (count = 2 + 1) = 3
+
+
+# Explanation in case of (Merge Sort) right list elements are always smaller than the left list while merging
+# in this case as the input list is a sorted list in descending order
+
+# [5,4,3,2,1]    -------------------------   input
+# [5,4] - [3,2,1]    ---------------------   splitting in stage - 1
+# [5] = [4] - [3] = [2,1]    -------------   splitting in stage - 2
+# [5] = [4] - [3] = [2] . [1]    ---------   splitting in stage - 3
+# [5] = [4] - [3] = [1,2]    -------------   rearranging, merging result of stage -3 for stage - 2 (count = 1)
+# [4,5] - [1,2,3]    ---------------------   rearranging, merging result of stage -2 for stage - 1 (count = 1 + (1 + 2))
+# [1,2,3,4,5]    -------------------------   output (count = 4 + (2 + 2 + 2)) = 10
 
 #code
 t = int(input())
@@ -49,3 +92,4 @@ for tt in range(t):
         count[0] += countme
         return result
     merge_sort(arr, count)
+    print(count[0])
