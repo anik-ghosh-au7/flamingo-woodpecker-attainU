@@ -13,15 +13,12 @@ class LinkedList:
     def append(self, data):
         if self.head is None:
             self.head = Node(data)
-            # self.end = self.head
+            # to do append operation in O(1)
+            self.end = self.head
             return
         else:
-            curr_node = self.head
-            while curr_node.next is not None:
-                curr_node = curr_node.next
-            curr_node.next = Node(data)
-            # self.end.next = Node(data)
-            # self.end = self.end.next
+            self.end.next = Node(data)
+            self.end = self.end.next
 
     def reverse(self):  # Time complexity O(n)
 
