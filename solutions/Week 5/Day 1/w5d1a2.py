@@ -9,6 +9,7 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
+        self.end = None
 
     def append(self, data):
         if self.head is None:
