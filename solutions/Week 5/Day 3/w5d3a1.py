@@ -20,7 +20,7 @@ class CircularLinkedList:
         else:
             self.end.next = new_node
             self.end = self.end.next
-            new_node.next = self.head
+            self.end.next = self.head
 
     def pop(self):
         if self.head is None:
