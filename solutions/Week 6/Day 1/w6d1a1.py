@@ -30,7 +30,7 @@ class LinkedList:
             return temp_node
 
 
-# Queue Class
+# Stack Class
 class Stack:
     def __init__(self):
         self.stack = LinkedList()
