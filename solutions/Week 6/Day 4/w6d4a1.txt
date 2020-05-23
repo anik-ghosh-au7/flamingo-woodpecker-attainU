@@ -1,0 +1,10 @@
+Adjacency list is a way to represent a graph which is nothing but a dictionary in python where each node or vertex is the key
+and if the graph is unweighted then the value of each key is just the list of vertices that the key vertex is connected to and
+for a weighted graph the values are a list of tuples where each tuple is a combination of the adjacent vertex and the weight
+associated with it.
+
+Adjacency matrix is also just another way to represent a graph, here we consider a two dimensional array or a nested list in
+case of python, the size of the array is dependent on the number of nodes present in the graph, so for example if a graph has
+three vertices then the array will be of 3 x 3 size i.e there will be a three columns and three rows present, and the value of
+each coordinate of the array will be 1 if there exists an edge in between those coordinates else it will be 0 for an unweighted
+graph and for weighted graph the value will be the weight associated to that edge.
