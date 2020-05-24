@@ -34,7 +34,7 @@ class BinaryTree:
             self.add_node(node.left, data)
 
 
-def inOrder_traversal(root):  # root --> left --> right
+def inOrder_traversal(root):  # left --> root --> right
     if root is None:
         return
 
