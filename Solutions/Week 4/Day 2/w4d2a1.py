@@ -1,4 +1,4 @@
-# Both solutions will give the correct result
+# Both Solutions will give the correct result
 
 
 # Solution 1 will give timeout for some test cases
