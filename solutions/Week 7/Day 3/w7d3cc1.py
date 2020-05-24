@@ -107,24 +107,22 @@ print('Height of tree : ', height(tree.root))  # 7
 #               3
 #             /   \
 #            1     5
-#             \   /  \
+#             \   /  \          ======>
 #              2 4    7
 #                      \
 #                       6
 
-#               ======>
 
 #               3
 #             /   \
 #            1     5
 #             \     \
-#              2     4
+#              2     4          ======>
 #                     \
 #                      7
 #                       \
 #                        6
 
-#               ======>
 
 #               3
 #                \
@@ -132,7 +130,7 @@ print('Height of tree : ', height(tree.root))  # 7
 #                  \
 #                   2
 #                    \
-#                     5
+#                     5         (Final tree after flattening)
 #                      \
 #                       4
 #                        \
