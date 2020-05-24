@@ -1,32 +1,43 @@
 class Graph:
-    def __init__(self, v):
-        self.v = v
-        self.adj = [[] for i in range(v)]
+    def __init__(self, size):
+        self.size = size
+        self.adj = [[] for _ in range(size)]
 
-    def addEdge(self, v, w):
-        self.adj[v].append(w)
+    def addEdge(self, vertex, adjacent_vertex):
+        self.adj[vertex].append(adjacent_vertex)
 
-    def iterative_dfs(self, s):
-        visited = [False for i in range(self.v)]
-        stack = [s]
-        while len(stack):
-            s = stack[-1]
-            stack.pop()
-            if not visited[s]:
-                print(s, end=" ")
-                visited[s] = True
+    def iterative_dfs(self, current_vertex):
+        visited_list = [False for _ in range(self.size)]
+        stack = [current_vertex]
+        result = []
 
-            for node in self.adj[s]:
-                if not visited[node]:
-                    stack.append(node)
+        while stack:
+            current_vertex = stack.pop()
+            result.append(current_vertex)
+            visited_list[current_vertex] = True
+
+            for adjacent_vertex in self.adj[current_vertex]:
+                if not visited_list[adjacent_vertex]:
+                    stack.append(adjacent_vertex)
+
+        return result
 
 
 g = Graph(5)
-g.addEdge(1, 0)
-g.addEdge(0, 2)
-g.addEdge(2, 1)
-g.addEdge(0, 3)
-g.addEdge(1, 4)
 
-print("Depth First Search Iteratively")
-g.iterative_dfs(0)
+# g.addEdge(0, 1)
+# g.addEdge(1, 2)
+# g.addEdge(2, 3)
+# g.addEdge(3, 0)
+# g.addEdge(1, 4)
+
+# print("Iterative DFS : ", *g.iterative_dfs(0))  # 0 1 4 2 3
+
+g.addEdge(2, 0)
+g.addEdge(0, 2)
+g.addEdge(1, 2)
+g.addEdge(0, 1)
+g.addEdge(3, 3)
+g.addEdge(1, 3)
+
+print("Iterative DFS : ", *g.iterative_dfs(2))  # 2 0 1 3
