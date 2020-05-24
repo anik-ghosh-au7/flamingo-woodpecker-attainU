@@ -88,7 +88,7 @@ print('Height of tree : ', height(tree.root))  # 4
 flatten(tree.root)
 
 print('after flattening : ')
-inOrder_traversal(tree.root)  # 3 1 2 5 4 7
+inOrder_traversal(tree.root)  # 3 1 2 5 4 7 6
 print('Height of tree : ', height(tree.root))  # 7
 
 # tree structure (before flattening)
