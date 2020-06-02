@@ -10,6 +10,11 @@ class Graph:
     def addEdge(self, current_vertex, adjacent_vertex):
         self.graph[current_vertex].append(adjacent_vertex)
 
+    # V- 1, 2, 3, 4, 5, 6, 7
+    # Q-
+    # R- 1, 2, 3, 4, 5, 6, 7
+
+
     def bfs(self, current_vertex):
         visited = [False for _ in range(len(self.graph))]
         queue = [current_vertex]
@@ -23,7 +28,7 @@ class Graph:
             for i in self.graph[current_vertex]:
                 if not visited[i]:
                     queue.append(i)
-                    visited[i] = True
+
 
         return result
 
@@ -36,4 +41,4 @@ g.addEdge(2, 0)
 g.addEdge(2, 3)
 g.addEdge(3, 3)
 
-print("BFS traversal from vertex 2 : ", *g.bfs(2))
+print("BFS traversal from vertex 2 : ", *g.bfs(2))  # 2031

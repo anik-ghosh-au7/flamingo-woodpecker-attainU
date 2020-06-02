@@ -11,7 +11,7 @@ from collections import defaultdict
 # Complete the shortestReach function below.
 def shortestReach(n, edges, s):
     # graph = defaultdict(dict)
-    graph = {i: {} for i in range(1, n + 1)}
+    graph = {i: {} for i in range(1, n + 1)} # {1: {}, 2: {}, 3: {}..}
     for u, v, w in edges:
         if v not in graph[u]:
             graph[u][v] = w
@@ -20,10 +20,10 @@ def shortestReach(n, edges, s):
             graph[u][v] = w
             graph[v][u] = w
     # print(graph)
-    result_list = [-1] * (n + 1)
+    result_list = [-1] * (n + 1)    # [-1, 0, 5, 11, 13, -1]
     lst_for_hp = []  # prone
     heapq.heappush(lst_for_hp, (0, s))
-    visited_set = set()
+    visited_set = set() # 1, 2, 3, 4
     while len(lst_for_hp) > 0:
         # print(lst_for_hp)
         popped_vertex = heapq.heappop(lst_for_hp)

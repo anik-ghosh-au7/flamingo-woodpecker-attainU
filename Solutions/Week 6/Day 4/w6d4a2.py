@@ -16,7 +16,7 @@ class Graph:
 
 
 def transform_to_adj_list(w_graph):
-    lis = {i: [] for i in range(w_graph.size)}
+    lis = {i: [] for i in range(w_graph.size)}  # {0: [(1, 10), (3, 40)], 1: [(0, 10), (2, 20), (4, 50)], 2: [(1, 20), (3, 30)], 3: [(0, 40), (2, 30)], 4: [(1, 50)]}
     for i in range(w_graph.size):
         for j in range(w_graph.size):
             if w_graph.get_elem(i, j) != 0:
@@ -55,3 +55,12 @@ print("list representation - ", transform_to_adj_list(g))
 # Weighted & Directed graph -
 # matrix representation -  [[0, 10, 0, 0, 0], [0, 0, 20, 0, 50], [0, 0, 0, 30, 0], [40, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
 # list representation -  {0: [(1, 10)], 1: [(2, 20), (4, 50)], 2: [(3, 30)], 3: [(0, 40)], 4: []}
+
+#   0  1   2   3  4
+# [[0, 10, 0, 40, 0],  0
+#  [10, 0, 20, 0, 50], 1
+#  [0, 20, 0, 30, 0],  2
+#  [40, 0, 30, 0, 0],  3
+#  [0, 50, 0, 0, 0]]   4
+
+

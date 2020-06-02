@@ -3,14 +3,16 @@ class Graph:
         self.size = size
         self.adj = [[] for _ in range(size)]
 
-    def addEdge(self, vertex, adjacent_vertex):
+    def addEdge(self, vertex, adjacent_vertex):  # {0: [1], 1: [2], 2:[3], 3: [0], 1:[4]}
         self.adj[vertex].append(adjacent_vertex)
 
     def iterative_dfs(self, current_vertex):
-        visited_list = [False for _ in range(self.size)]
+        visited_list = [False for _ in range(self.size)] # [false, false ...]
         stack = [current_vertex]
         result = []
-
+        # A -t, B - t, D- t, F-t, E-t, C-t, G-t
+        # stack - []
+        # result - [A, B, D, F, E, C, G]
         while stack:
             current_vertex = stack.pop()
             result.append(current_vertex)
